@@ -2,35 +2,6 @@
 #include <ctime>
 #include "HeaderOfSorting.h"
 
-void answerLH(int *answer)
-{
-	std::cout << "Сортировку выполнить в порядке убывания/возрастания - 1/2" << std::endl;
-	std::cin >> *answer;
-	while (*answer != 1 && *answer != 2)
-	{
-		proverka(&*answer);
-	}
-}
-
-void questionOfFill(int* questionOfFilling)
-{
-	std::cin >> *questionOfFilling;
-	while (*questionOfFilling != 1 && *questionOfFilling != 2)
-	{
-		proverka(*&questionOfFilling);
-	}
-}
-
-void getValue(int* lenght)//получаю количество эл-тов + проверяю на их правильность
-{
-	std::cout << "Сколько элeментов в массиве?" << std::endl;
-	std::cin >> *lenght;
-	while (std::cin.fail())
-	{
-		proverka(*&lenght);
-	}
-}
-
 int main()
 {
 	setlocale(LC_ALL, "rus");//русский текст
